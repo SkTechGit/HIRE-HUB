@@ -167,7 +167,6 @@ const UserForm = ({ open, setOpen }) => {
                     />
                     <div className='w-full flex gap-2 text-sm'>
                       <div className='w-1/2'>
-<<<<<<< HEAD
                         <label className='text-gray-600 text-sm mb-2 block font-semibold'>
                           Profile Picture
                         </label>
@@ -190,30 +189,13 @@ const UserForm = ({ open, setOpen }) => {
 
                       <div className='w-1/2'>
                         <label className='text-gray-600 text-sm mb-1 block font-semibold'>
-=======
-                        <label className='text-gray-600 text-sm mb-1'>
-                          Profile Picture
-                        </label>
-                        <input
-                          type='file'
-                          onChange={(e) => setProfileImage(e.target.files[0])}
-                        />
-                      </div>
-
-                      <div className='w-1/2'>
-                        <label className='text-gray-600 text-sm mb-1'>
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
                           Resume
                         </label>
                         <input
                           type='file'
-<<<<<<< HEAD
                           accept='.pdf,.doc,.docx'
                           onChange={(e) => setUploadCv(e.target.files[0])}
                           className='text-sm py-2 px-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500'
-=======
-                          onChange={(e) => setUploadCv(e.target.files[0])}
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
                         />
                       </div>
                     </div>

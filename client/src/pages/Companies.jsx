@@ -37,13 +37,9 @@ const Companies = () => {
 
         setNumPage(res?.numOfPage);
         setRecordsCount(res?.total);
-<<<<<<< HEAD
         // Filter companies to show only those with job openings
         const companiesWithOpenings = res?.data?.filter(cmp => cmp?.jobPosts?.length > 0) || [];
         setData(companiesWithOpenings);
-=======
-        setData(res?.data);
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
 
         setIsFetching(false);
       } catch (e) {
@@ -73,13 +69,8 @@ const Companies = () => {
       <div className='container mx-auto flex flex-col gap-5 2xl:gap-10 px-5 py-6 bg-[#f7fdfd]'>
         <div className='flex items-center justify-between mb-4'>
           <p className='text-sm md:text-base'>
-<<<<<<< HEAD
             Showing: <span className='font-semibold'>{data?.length}</span> Companies
             With Job Openings
-=======
-            Showing: <span className='font-semibold'>{recordsCount}</span> Companies
-            Available
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
           </p>
 
           <div className='flex flex-col md:flex-row gap-0 md:gap-2 md:items-center'>
@@ -90,7 +81,6 @@ const Companies = () => {
         </div>
 
         <div className='w-full flex flex-col gap-6'>
-<<<<<<< HEAD
           {data?.length > 0 ? (
             data?.map((cmp, index) => (
               <CompanyCard cmp={cmp} key={index} />
@@ -100,11 +90,6 @@ const Companies = () => {
               <p className='text-gray-500 text-lg'>No companies with job openings found</p>
             </div>
           )}
-=======
-          {data?.map((cmp, index) => (
-            <CompanyCard cmp={cmp} key={index} />
-          ))}
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
 
           {isFetching && (
             <div className='mt-10'>

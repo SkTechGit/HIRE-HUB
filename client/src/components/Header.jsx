@@ -14,19 +14,13 @@ const SearchInput = ({ placeholder, icon, value, setValue, styles }) => {
   const clearInput = () => setValue("");
 
   return (
-<<<<<<< HEAD
     <div className={`flex md:w-auto items-center flex-1 ${styles}`}>
       {icon && <span className='text-blue-600 text-lg lg:text-xl mr-2'>{icon}</span>}
-=======
-    <div className={`flex md:w-1/2 items-center ${styles}`}>
-      {icon}
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
 
       <input
         value={value}
         onChange={(e) => handleChange(e)}
         type='text'
-<<<<<<< HEAD
         className='w-full p-1.5 lg:p-2 outline-none bg-transparent text-sm lg:text-base text-gray-800 placeholder-gray-400'
         placeholder={placeholder}
       />
@@ -37,16 +31,6 @@ const SearchInput = ({ placeholder, icon, value, setValue, styles }) => {
           onClick={clearInput}
         />
       )}
-=======
-        className='w-full md:w-60 p-1 outline-none bg-transparent text-base'
-        placeholder={placeholder}
-      />
-
-      <AiOutlineCloseCircle
-        className='hidden md:flex text-gray-600 text-xl cursor-pointer'
-        onClick={clearInput}
-      />
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
     </div>
   );
 };
@@ -61,7 +45,6 @@ const Header = ({
   setLocation,
 }) => {
   return (
-<<<<<<< HEAD
     <div className='bg-gradient-to-b from-blue-50 to-[#f7fdfd]'>
       <div
         className={`container mx-auto px-4 lg:px-6 ${
@@ -84,35 +67,11 @@ const Header = ({
             <SearchInput
               placeholder='Add Country or City'
               icon={<CiLocationOn className='text-blue-600 text-lg lg:text-xl' />}
-=======
-    <div className='bg-[#f7fdfd]'>
-      <div
-        className={`container mx-auto px-5 ${
-          type ? "h-[500px]" : "h-[350px]"
-        } flex items-center relative`}
-      >
-        <div className='p-10 z-10'>
-          <div className='mb-8'>
-            <p className='mr-[300px] text-center text-black-700 font-bold text-4xl'>{title}</p>
-          </div>
-
-          <div className='h-[60px] w-[70%] flex items-center justify-around bg-white px-2 md:px-5 py-2 md:py-6 shadow-2xl rounded-full'>
-            <SearchInput
-              placeholder='Job Title or Keywords'
-              icon={<AiOutlineSearch className='text-gray-600 text-xl' />}
-              value={searchQuery}
-              setValue={setSearchQuery}
-            />
-            <SearchInput
-              placeholder='Add Country or City'
-              icon={<CiLocationOn className='text-gray-600 text-xl' />}
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
               value={location}
               setValue={setLocation}
               styles={"hidden md:flex"}
             />
 
-<<<<<<< HEAD
             <button
               onClick={handleClick}
               className='ml-2 lg:ml-3 text-white font-semibold py-2 px-5 lg:py-2.5 lg:px-7 focus:outline-none bg-gradient-to-r from-[#1ADFA6] to-green-500 hover:from-green-500 hover:to-[#1ADFA6] rounded-xl text-sm lg:text-base transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 whitespace-nowrap'
@@ -127,25 +86,6 @@ const Header = ({
                 <span
                   key={index}
                   className='bg-gradient-to-r from-[#1ADFA6] to-green-400 text-white py-1.5 lg:py-2 px-3 lg:px-4 hover:scale-110 ease-in-out duration-200 rounded-full text-xs lg:text-sm font-semibold shadow-md hover:shadow-lg transition-all cursor-pointer whitespace-nowrap'
-=======
-            <div>
-              <CustomButton
-                onClick={handleClick}
-                title='Search'
-                containerStyles={
-                  "text-white py-2 md:px-3 focus:outline-none bg-[#1ADFA6] hover:scale-125 duration-500 ease-in-out rounded-full md:rounded-md text-sm md:text-base"
-                }
-              />
-            </div>
-          </div>
-
-          {type && (
-            <div className='w-full lg:1/2 flex flex-wrap md:gap-5 md:py-10'>
-              {popularSearch.map((search, index) => (
-                <span
-                  key={index}
-                  className='bg-[#1ADFA6] text-black py-1 px-2 hover:scale-125 ease-in-out duration-200 rounded-full text-sm md:text-base'
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
                 >
                   {search}
                 </span>
@@ -154,13 +94,8 @@ const Header = ({
           )}
         </div>
 
-<<<<<<< HEAD
         <div className='hidden lg:flex w-3/5 absolute right-0 top-0 h-full items-center justify-end pr-8'>
           <img src={HeroImage} className='object-contain h-full max-h-[500px] drop-shadow-xl' />
-=======
-        <div className='w-1/3  mr-[120px] absolute top-24 md:-top-6 lg:-top-14 right-16 2xl:right-[18rem]'>
-          <img src={HeroImage} className='object-contain h-[22pc]' />
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
         </div>
       </div>
     </div>

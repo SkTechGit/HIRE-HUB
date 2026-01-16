@@ -3,7 +3,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { BiBriefcaseAlt2 } from "react-icons/bi";
 import { BsStars } from "react-icons/bs";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-<<<<<<< HEAD
 import { useSelector } from "react-redux";
 
 import Header from "../components/Header";
@@ -14,26 +13,14 @@ import { apiRequest, updateURL } from "../utils";
 const FindJobs = () => {
   const { user } = useSelector((state) => state.user);
   
-=======
-
-import Header from "../components/Header";
-import { experience, jobTypes, jobs } from "../utils/data";
-import { CustomButton, JobCard, ListBox, Loading } from "../components";
-import { apiRequest, updateURL } from "../utils";
-
-const FindJobs = () => {
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
   const [sort, setSort] = useState("Newest");
   const [page, setPage] = useState(1);
   const [numPage, setNumPage] = useState(1);
   const [recordCount, setRecordCount] = useState(0);
   const [data, setData] = useState([]);
-<<<<<<< HEAD
   const [recommendedJobs, setRecommendedJobs] = useState([]);
   const [showRecommended, setShowRecommended] = useState(false);
   const [matchedResume, setMatchedResume] = useState([]);
-=======
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
 
   const [searchQuery, setSearchQuery] = useState("");
   const [jobLocation, setJobLocation] = useState("");
@@ -73,7 +60,6 @@ const FindJobs = () => {
 
       } catch (error) {}
   };
-<<<<<<< HEAD
 
   const fetchRecommendedJobs = async () => {
     try {
@@ -92,8 +78,6 @@ const FindJobs = () => {
     }
   };
 
-=======
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
   const filterJobs = (val) => {
     if (filterJobTypes?.includes(val)) {
       setFilterJobTypes(filterJobTypes.filter((el) => el != val));
@@ -132,12 +116,9 @@ const FindJobs = () => {
 
     useEffect(() => {
       fetchJobs();
-<<<<<<< HEAD
       if (user?.token) {
         fetchRecommendedJobs();
       }
-=======
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
     },[sort, filterJobTypes, filterExp, page]);
 
   return (
@@ -152,7 +133,6 @@ const FindJobs = () => {
         setLocation={setJobLocation}
       />
 
-<<<<<<< HEAD
       <div className='container mx-auto w-full flex gap-6 lg:gap-8 2xl:gap-10 px-4 lg:px-6 py-6 md:py-8 bg-[#f7fdfd]'>
         <div className='hidden lg:flex flex-col w-full lg:w-1/5 h-fit bg-white rounded-lg shadow-md p-6 sticky top-20'>
           <p className='text-lg font-bold text-gray-900 mb-6'>🔍 Filter Search</p>
@@ -161,16 +141,6 @@ const FindJobs = () => {
             <div className='flex justify-between items-center mb-4'>
               <p className='flex items-center gap-2 font-semibold text-gray-800'>
                 <BiBriefcaseAlt2 className='text-lg' />
-=======
-      <div className='container mx-auto flex gap-6 2xl:gap-10 md:px-5 py-0 md:py-6 bg-[#f7fdfd]'>
-        <div className='hidden md:flex flex-col w-1/6 h-fit bg-white shadow-sm'>
-          <p className='text-lg font-semibold text-slate-600'>Filter Search</p>
-
-          <div className='py-2'>
-            <div className='flex justify-between mb-3'>
-              <p className='flex items-center gap-2 font-semibold'>
-                <BiBriefcaseAlt2 />
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
                 Job Type
               </p>
 
@@ -179,7 +149,6 @@ const FindJobs = () => {
               </button>
             </div>
 
-<<<<<<< HEAD
             <div className='flex flex-col gap-3'>
               {jobTypes.map((jtype, index) => (
                 <div key={index} className='flex items-center gap-2 text-sm lg:text-base'>
@@ -190,34 +159,15 @@ const FindJobs = () => {
                     onChange={(e) => filterJobs(e.target.value)}
                   />
                   <span className='text-gray-700'>{jtype}</span>
-=======
-            <div className='flex flex-col gap-2'>
-              {jobTypes.map((jtype, index) => (
-                <div key={index} className='flex gap-2 text-sm md:text-base '>
-                  <input
-                    type='checkbox'
-                    value={jtype}
-                    className='w-4 h-4'
-                    onChange={(e) => filterJobs(e.target.value)}
-                  />
-                  <span>{jtype}</span>
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
                 </div>
               ))}
             </div>
           </div>
 
-<<<<<<< HEAD
           <div className='py-4'>
             <div className='flex justify-between items-center mb-4'>
               <p className='flex items-center gap-2 font-semibold text-gray-800'>
                 <BsStars className='text-lg' />
-=======
-          <div className='py-2 mt-4'>
-            <div className='flex justify-between mb-3'>
-              <p className='flex items-center gap-2 font-semibold'>
-                <BsStars />
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
                 Experience
               </p>
 
@@ -226,7 +176,6 @@ const FindJobs = () => {
               </button>
             </div>
 
-<<<<<<< HEAD
             <div className='flex flex-col gap-3'>
               {experience.map((exp) => (
                 <div key={exp.title} className='flex items-center gap-2'>
@@ -237,25 +186,12 @@ const FindJobs = () => {
                     onChange={(e) => filterExperience(e.target.value)}
                   />
                   <span className='text-gray-700 text-sm lg:text-base'>{exp.title}</span>
-=======
-            <div className='flex flex-col gap-2'>
-              {experience.map((exp) => (
-                <div key={exp.title} className='flex gap-3'>
-                  <input
-                    type='checkbox'
-                    value={exp?.value}
-                    className='w-4 h-4'
-                    onChange={(e) => filterExperience(e.target.value)}
-                  />
-                  <span>{exp.title}</span>
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
         <div className='w-full lg:w-4/5 px-0'>
           {/* Resume Upload Filter Section */}
           {user?.token && (
@@ -377,48 +313,6 @@ const FindJobs = () => {
               </div>
             )}
           </div>
-=======
-        <div className='w-full md:w-5/6 px-5 md:px-0'>
-          <div className='flex items-center justify-between mb-4'>
-            <p className='text-sm md:text-base'>
-              Showing: <span className='font-semibold'>{recordCount}</span> Jobs
-              Available
-            </p>
-
-            <div className='flex flex-col md:flex-row gap-0 md:gap-2 md:items-center'>
-              <p className='text-sm md:text-base'>Sort By:</p>
-
-              <ListBox sort={sort} setSort={setSort} />
-            </div>
-          </div>
-
-          <div className='w-full flex flex-wrap gap-4'>
-            {data?.map((job, index) => {
-              const newJob = {
-                name: job?.company?.name,
-                logo: job?.company?.profileUrl,
-                ...job,
-              };
-              return <JobCard job={newJob} key={index} />
-            })}
-          </div>
-
-          {isFetching &&(
-            <div className="py-10">
-              <Loading/>
-            </div>
-          )}
-
-          {numPage > page && !isFetching && (
-            <div className='w-full flex items-center justify-center pt-16'>
-              <CustomButton
-              onClick={handleShowMore}
-                title='Load More'
-                containerStyles={`text-blue-600 py-1.5 px-5 focus:outline-none hover:bg-blue-700 hover:text-white rounded-full text-base border border-blue-600`}
-              />
-            </div>
-          )}
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
         </div>
       </div>
     </div>

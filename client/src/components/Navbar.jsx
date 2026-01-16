@@ -19,7 +19,6 @@ function MenuList({ user, onClick }) {
 
   return (
     <div>
-<<<<<<< HEAD
       <Menu as='div' className='relative inline-block text-left'>
         <div>
           <Menu.Button className='inline-flex items-center gap-2 rounded-lg bg-white px-3 py-2 text-sm font-medium text-slate-700 hover:bg-gray-50 border border-gray-200 transition-all duration-200'>
@@ -28,36 +27,17 @@ function MenuList({ user, onClick }) {
                 {user?.firstName ?? user?.name}
               </p>
               <span className='text-xs text-blue-600'>
-=======
-      <Menu as='div' className='inline-block text-left'>
-        <div className='flex'>
-          <Menu.Button className='inline-flex gap-2 w-full rounded-md bg-white md:px-4 py-2 text-sm font-medium text-slate-700 hover:bg-opacity-20 '>
-            <div className='leading[80px] flex flex-col items-start'>
-              <p className='text-sm font-semibold '>
-                {user?.firstName ?? user?.name}
-              </p>
-              <span className='text-sm text-blue-600 '>
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
                 {user?.jobTitle ?? user?.email}
               </span>
             </div>
 
             <img
-<<<<<<< HEAD
               src={user?.profileUrl || "https://api.dicebear.com/7.x/avataaars/svg?seed=" + user?.firstName}
               alt='user profile'
               className='w-9 h-9 rounded-full object-cover flex-shrink-0'
             />
             <BiChevronDown
               className='h-5 w-5 text-slate-600 flex-shrink-0'
-=======
-              src={user?.profileUrl}
-              alt='user profile'
-              className='w-10 h-10 rounded-full object-cover '
-            />
-            <BiChevronDown
-              className='h-8 w-8 text-slate-600'
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
               aria-hidden='true'
             />
           </Menu.Button>
@@ -72,13 +52,8 @@ function MenuList({ user, onClick }) {
           leaveFrom='transform opacity-100 scale-100'
           leaveTo='transform opacity-0 scale-95'
         >
-<<<<<<< HEAD
           <Menu.Items className='absolute right-0 mt-2 w-48 origin-top-right divide-y divide-gray-100 rounded-lg bg-white shadow-xl focus:outline-none border border-gray-200 z-50'>
             <div className='p-1'>
-=======
-          <Menu.Items className='absolute z-50 right-2 mt-2 w-56 origin-top-right divide-y dividfe-gray-100 rounded-md bg-white shadow-lg focus:outline-none '>
-            <div className='p-1 '>
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
               <Menu.Item>
                 {({ active }) => (
                   <Link
@@ -86,24 +61,14 @@ function MenuList({ user, onClick }) {
                       user?.accountType ? "user-profile" : "company-profile"
                     }`}
                     className={`${
-<<<<<<< HEAD
                       active ? "bg-blue-600 text-white" : "text-gray-700"
                     } group flex w-full items-center rounded-md px-3 py-2 text-sm font-medium transition-colors`}
-=======
-                      active ? "bg-blue-500 text-white" : "text-gray-900"
-                    } group flex w-full items-center rounded-md p-2 text-sm`}
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
                     onClick={onClick}
                   >
                     <CgProfile
                       className={`${
-<<<<<<< HEAD
                         active ? "text-white" : "text-gray-500"
                       } mr-2 h-4 w-4 flex-shrink-0`}
-=======
-                        active ? "text-white" : "text-gray-600"
-                      } mr-2 h-5 w-5  `}
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
                       aria-hidden='true'
                     />
                     {user?.accountType ? "User Profile" : "Company Profile"}
@@ -116,7 +81,6 @@ function MenuList({ user, onClick }) {
                   <button
                     onClick={() => handleLogout()}
                     className={`${
-<<<<<<< HEAD
                       active ? "bg-red-600 text-white" : "text-gray-700"
                     } group flex w-full items-center rounded-md px-3 py-2 text-sm font-medium transition-colors`}
                   >
@@ -124,15 +88,6 @@ function MenuList({ user, onClick }) {
                       className={`${
                         active ? "text-white" : "text-gray-500"
                       } mr-2 h-4 w-4 flex-shrink-0`}
-=======
-                      active ? "bg-blue-500 text-white" : "text-gray-900"
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                  >
-                    <AiOutlineLogout
-                      className={`${
-                        active ? "text-white" : "text-gray-600"
-                      } mr-2 h-5 w-5  `}
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
                       aria-hidden='true'
                     />
                     Log Out
@@ -149,10 +104,7 @@ function MenuList({ user, onClick }) {
 const Navbar = () => {
   const {user} = useSelector((state) => state.user);
   const [isOpen, setIsOpen] = useState(false);
-<<<<<<< HEAD
   const isSeekerAccount = user?.accountType === "seeker";
-=======
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
   
   const handleCloseNavbar = () => {
     setIsOpen((prev) => !prev);
@@ -164,16 +116,11 @@ const Navbar = () => {
         <nav className='container mx-auto flex items-center justify-between p-5'>
           <div>
             <Link to='/' className='text-blue-600 font-bold text-xl'>
-<<<<<<< HEAD
               HIRE<span className='text-[#1ADFA6]'>-HUB</span>
-=======
-              Job<span className='text-[#1ADFA6]'>Finder</span>
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
             </Link>
           </div>
 
           <ul className='hidden lg:flex gap-10 text-base'>
-<<<<<<< HEAD
             {isSeekerAccount && (
               <>
                 <li>
@@ -194,20 +141,6 @@ const Navbar = () => {
                 </li>
               </>
             )}
-=======
-            <li>
-              <Link to='/'>Find Job</Link>
-            </li>
-            <li>
-              <Link to='/companies'>Companies</Link>
-            </li>
-            <li>
-              <Link to={user?.accountType === "seeker" ? "/applications" : '/upload-job'}>{user?.accountType === "seeker" ? "Applications" : "Upload Jobs"}</Link>
-            </li>
-            <li>
-              <Link to='/about-us'>About</Link>
-            </li>
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
           </ul>
 
           <div className='hidden lg:block'>
@@ -239,7 +172,6 @@ const Navbar = () => {
             isOpen ? "absolute bg-[#f7fdfd] " : "hidden"
           } container lg:hidden flex-col pl-8 gap-3 py-5`}
         >
-<<<<<<< HEAD
           {isSeekerAccount && (
             <>
               <Link to='/' onClick={handleCloseNavbar}>
@@ -265,25 +197,6 @@ const Navbar = () => {
               </Link>
             </>
           )}
-=======
-          <Link to='/' onClick={handleCloseNavbar}>
-            Find Job
-          </Link>
-          <Link to='/companies' onClick={handleCloseNavbar}>
-            Companies
-          </Link>
-          <Link
-            onClick={handleCloseNavbar}
-            to={
-              user?.accountType === "seeker" ? "applly-gistory" : "upload-job"
-            }
-          >
-            {user?.accountType === "seeker" ? "Applications" : "Upload Job"}
-          </Link>
-          <Link to='/about-us' onClick={handleCloseNavbar}>
-            About
-          </Link>
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
 
           <div className='w-full py-10'>
             {!user?.token ? (

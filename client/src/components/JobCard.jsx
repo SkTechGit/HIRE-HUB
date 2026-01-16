@@ -1,6 +1,5 @@
 import { GoLocation } from "react-icons/go";
 import moment from "moment";
-<<<<<<< HEAD
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -17,20 +16,11 @@ const JobCard = ({ job, isRecruiter = false }) => {
   const isCompanyUser = user?.accountType === "company" || isRecruiter;
   const applicantCount = job?.application?.length || 0;
 
-=======
-import { Link } from "react-router-dom";
-
-const JobCard = ({ job }) => {
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
   return (
     <Link to={`/job-detail/${job?._id}`}>
       <div
         className='w-full md:w-[16rem] 2xl:w-[18rem] h-[16rem] md:h-[18rem] bg-white flex flex-col justify-between shadow-lg 
-<<<<<<< HEAD
                   rounded-md px-3 py-5 hover:shadow-2xl hover:-translate-y-2 ease-in-out duration-300 relative'
-=======
-                rounded-md px-3 py-5 hover:bg-gray-100 hover:scale-125 ease-in-out duration-300'
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
       >
         <div className='w-full h-full flex flex-col 
         justify-between'>
@@ -66,7 +56,6 @@ const JobCard = ({ job }) => {
           </span>
         </div>
         </div>
-<<<<<<< HEAD
 
         {/* Applicants Badge and Button for Recruiters */}
         {isCompanyUser && applicantCount > 0 && (
@@ -82,8 +71,6 @@ const JobCard = ({ job }) => {
             </button>
           </div>
         )}
-=======
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
       </div>
     </Link>
   );

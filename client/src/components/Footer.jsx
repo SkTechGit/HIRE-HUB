@@ -91,11 +91,7 @@ const Footer = () => {
         <div className='bg-[#001a36]'>
           <div className='container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row'>
             <p className='text-gray-300 text-sm text-center sm:text-left'>
-<<<<<<< HEAD
               &copy; 2024 HIRE-HUB —
-=======
-              &copy; 2024 Job Finder —
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
               <a
                 href='https://youtube.com/@skspytube?feature=shared'
                 className='text-[#1199e7] ml-1'

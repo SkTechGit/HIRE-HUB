@@ -1,6 +1,5 @@
 
 :root {
-<<<<<<< HEAD
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   font-weight: 400;
@@ -9,25 +8,17 @@
   --text-dark: #212121;
   --text-light: #666666;
   --bg-light: #f7fdfd;
-=======
-  font-family: Inter, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
 }
 
 a {
   font-weight: 500;
   text-decoration: inherit;
-<<<<<<< HEAD
   color: var(--secondary-color);
   transition: color 0.3s ease;
 }
 
 a:hover {
   color: var(--primary-color);
-=======
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
 }
 
 
@@ -37,7 +28,6 @@ font-weight: 700;
 color: #1676CC;
 }
 
-<<<<<<< HEAD
 * {
   box-sizing: border-box;
   margin: 0;
@@ -70,10 +60,6 @@ main {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 1rem;
-=======
-body {
-  box-sizing: border-box;
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
 }
 
 .slider {

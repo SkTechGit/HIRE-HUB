@@ -9,10 +9,7 @@ import JobCard from "./JobCard";
 import Loading from "./Loading";
 import CompanyCard from "./CompanyCard";
 import JobTypes from "./JobTypes";
-<<<<<<< HEAD
 import ResumeUploadFilter from "./ResumeUploadFilter";
-=======
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
 
 export {
   Navbar,
@@ -26,8 +23,5 @@ export {
   Loading,
   CompanyCard,
   JobTypes,
-<<<<<<< HEAD
   ResumeUploadFilter,
-=======
->>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
 };
