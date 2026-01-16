@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 
 const CompanyCard = ({ cmp }) => {
   return (
+<<<<<<< HEAD
     <div className='w-full h-16 flex gap-4 items-center justify-between bg-white shadow-md rounded hover:shadow-lg transition-all duration-200'>
+=======
+    <div className='w-full h-16 flex gap-4 items-center justify-between bg-white shadow-md rounded'>
+>>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
       <div className='w-3/4 md:w-2/4 flex gap-4 items-center'>
         <Link to={`/company-profile/${cmp?._id}`}>
           <img

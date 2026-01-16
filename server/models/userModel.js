@@ -39,7 +39,11 @@ const userSchema = new mongoose.Schema(
 
 // middelwares
 userSchema.pre("save", async function () {
+<<<<<<< HEAD
   if (!this.isModified("password")) return;
+=======
+  if (!this.isModified) return;
+>>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
   const salt = await bcrypt.genSalt(10);
   this.password = await bcrypt.hash(this.password, salt);
 });

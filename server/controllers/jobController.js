@@ -259,6 +259,7 @@ export const deleteJobPost = async (req, res, next) => {
     res.status(404).json({ message: error.message });
   }
 };
+<<<<<<< HEAD
 
 export const applyJob = async (req, res, next) => {
   try {
@@ -366,3 +367,5 @@ export const getJobApplicants = async (req, res, next) => {
     res.status(500).json({ message: error.message });
   }
 };
+=======
+>>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89

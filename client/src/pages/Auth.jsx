@@ -15,6 +15,7 @@ const Auth = () => {
     return window.location.replace(from);
   }
   return (
+<<<<<<< HEAD
     <div className='w-full min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50 relative overflow-hidden'>
       {/* Decorative Elements */}
       <div className='absolute top-0 right-0 w-96 h-96 bg-[#1ADFA6] opacity-5 rounded-full blur-3xl'></div>
@@ -33,6 +34,12 @@ const Auth = () => {
           <SignUp open={open} setOpen={setOpen} />
         </div>
       </div>
+=======
+    <div className='w-full '>
+      <img src={Office} alt='Office' className='object-contain ' />
+
+      <SignUp open={open} setOpen={setOpen} />
+>>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
     </div>
   );
 };

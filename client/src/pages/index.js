@@ -6,7 +6,10 @@ import CompanyProfile from "./CompanyProfile";
 import UploadJob from "./UploadJob";
 import About from "./About";
 import JobDetail from "./JobDetail";
+<<<<<<< HEAD
 import JobApplicants from "./JobApplicants";
+=======
+>>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
 
 export {
   FindJobs,
@@ -17,5 +20,8 @@ export {
   UploadJob,
   About,
   JobDetail,
+<<<<<<< HEAD
   JobApplicants,
+=======
+>>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
 };

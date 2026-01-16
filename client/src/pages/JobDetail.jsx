@@ -2,7 +2,11 @@ import { useEffect, useState } from "react";
 import { Linkedin } from "../assets";
 import moment from "moment";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
+<<<<<<< HEAD
 import { useParams, useNavigate } from "react-router-dom";
+=======
+import { useParams } from "react-router-dom";
+>>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
 import { jobs } from "../utils/data";
 import { CustomButton, JobCard, Loading } from "../components";
 import { useSelector } from "react-redux";
@@ -10,7 +14,10 @@ import { apiRequest } from "../utils";
 
 const JobDetail = () => {
   const {id} = useParams();
+<<<<<<< HEAD
   const navigate = useNavigate();
+=======
+>>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
   
   const {user} = useSelector((state) => state.user);
 
@@ -19,12 +26,19 @@ const JobDetail = () => {
 
   const [selected, setSelected] = useState("0");
   const [isFetching, setIsFetching] = useState(false);
+<<<<<<< HEAD
   const [isApplying, setIsApplying] = useState(false);
   const [hasApplied, setHasApplied] = useState(false);
+=======
+>>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
 
   const getJobDetails = async() => {
     setIsFetching(true);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
     try {
       const res = await apiRequest({
         url: "/jobs/get-job-detail/" + id,
@@ -33,12 +47,15 @@ const JobDetail = () => {
 
         setJob(res?.data);
         setSimiliarJobs(res?.setSimiliarJobs);
+<<<<<<< HEAD
         
         // Check if user has already applied
         if (user?._id && res?.data?.application?.includes(user?._id)) {
           setHasApplied(true);
         }
         
+=======
+>>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
         setIsFetching(false);
 
     } catch (error) {
@@ -47,6 +64,7 @@ const JobDetail = () => {
     }
 
   };
+<<<<<<< HEAD
 
   const handleApplyJob = async () => {
     if (!user?.token) {
@@ -80,6 +98,8 @@ const JobDetail = () => {
       setIsApplying(false);
     }
   };
+=======
+>>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
   const handleDeletePost = async() => {
     setIsFetching(true);
     try {
@@ -162,6 +182,7 @@ const JobDetail = () => {
               </p>
             </div>
 
+<<<<<<< HEAD
             <div 
               className={`bg-[#fed0ab] w-40 h-16 px-6 rounded-lg flex flex-col items-center justify-center transition-all duration-200 ${
                 user?.accountType === "company" && job?.application?.length > 0 && user?._id === job?.company?._id
@@ -178,13 +199,19 @@ const JobDetail = () => {
                 }
               }}
             >
+=======
+            <div className='bg-[#fed0ab] w-40 h-16 px-6 rounded-lg flex flex-col items-center justify-center'>
+>>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
               <span className='text-sm'>No. of Applicants</span>
               <p className='text-lg font-semibold text-gray-700'>
                 {job?.application?.length}
               </p>
+<<<<<<< HEAD
               {user?.accountType === "company" && job?.application?.length > 0 && (
                 <span className='text-xs text-blue-600 font-semibold mt-1'>Click to view</span>
               )}
+=======
+>>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
             </div>
 
             <div className='bg-[#cecdff] w-40 h-16 px-6 rounded-lg flex flex-col items-center justify-center'>
@@ -259,6 +286,7 @@ const JobDetail = () => {
             {user?._id === job?.company?._id ? ( <CustomButton
               title='Delete Post'
               onClick={handleDeletePost}
+<<<<<<< HEAD
               containerStyles={`w-full flex items-center justify-center text-white bg-black py-3 px-5 outline-none rounded-full text-base hover:bg-gray-800 transition-all`}
             /> 
             ) : (
@@ -271,6 +299,14 @@ const JobDetail = () => {
                   ? 'bg-green-600 cursor-not-allowed' 
                   : 'bg-black hover:bg-gray-800'
               } py-3 px-5 outline-none rounded-full text-base transition-all disabled:opacity-75`}
+=======
+              containerStyles={`w-full flex items-center justify-center text-white bg-black py-3 px-5 outline-none rounded-full text-base`}
+            /> 
+            ) : (
+            <CustomButton
+              title='Apply Now'
+              containerStyles={`w-full flex items-center justify-center text-white bg-black py-3 px-5 outline-none rounded-full text-base`}
+>>>>>>> e3dfdbd9b3d169d75b412796dbf97a28f063ad89
             />
             )}
           </div>
